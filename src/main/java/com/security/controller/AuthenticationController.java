@@ -10,9 +10,12 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+import jakarta.servlet.http.HttpServletResponse;
 
+import com.security.dto.AuthenticationDTO;
 import com.security.sec.AuthenticationResponse;
 import com.security.sec.util.JwtUtil;
+import com.security.service.UserDetailsServiceImpl;
 
 import java.io.IOException;
 

@@ -1,5 +1,8 @@
 package com.security.sec.filter;
 
+import jakarta.servlet.*;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
@@ -24,8 +27,9 @@ public class SimpleCorsFilter implements Filter {
     }
 
     @Override
-    public void doFilter(HttpRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
-        HttpResponse response = (HttpResponse) res;
+    public void doFilter(HttpServletRequest req, ServletResponse res, FilterChain chain)
+            throws IOException, ServletException {
+        HttpServletResponse response = (HttpResponse) res;
         HttpServletRequest request = (HttpServletRequest) req;
         Map<String, String> map = new HashMap<>();
         String originHeader = request.getHeader("origin");
