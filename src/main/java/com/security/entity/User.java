@@ -1,3 +1,5 @@
+package com.security.entity;
+
 import jakarta.persistence.*;
 import lombok.Data;
 

@@ -1,7 +1,8 @@
 package com.security.controller;
 
-import ;
-import com.springjwt.services.auth.AuthService;
+import com.security.dto.UserDTO;
+import com.security.service.AuthService;
+import com.security.dto.SignupDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
